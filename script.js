@@ -28,7 +28,7 @@ function addBookToLibrary(){
     console.log(library);
     console.log(library[(library.length)-1]);
     //console.log(formData('form'));
-    //displayBook();
+    displayBook();
 
     
 }
@@ -67,7 +67,7 @@ for (const book of library){
 
    
    
-    }
+    }*/
 
     function displayBook(){
         let card = document.createElement('div');
@@ -91,4 +91,3 @@ for (const book of library){
     }
     }
 
-*/
