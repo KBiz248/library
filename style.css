@@ -6,4 +6,6 @@ body {
 
 #cardArea {
     background-color: lightslategray;
+    display: grid;
+    
 }
