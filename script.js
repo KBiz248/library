@@ -110,10 +110,13 @@ function clearForm(){
 const textInputs = document.querySelectorAll('input[type="text"]');
 const radioInputs = document.querySelectorAll('input[type="radio"]');
 for(item of textInputs){item.value=''};
+for(option of radioInputs){option.checked=false};
 
 /*
 for(item of radioInputs){
 }
 //play with this to see if radio buttons can be unchecked
+
+answer- yes, but you can't use 'item' for both loops.
 */
 }
