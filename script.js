@@ -91,3 +91,17 @@ for (const book of library){
     }
     }
 
+function toggleForm(){
+    let form = document.getElementById('form');
+    let formButton = document.getElementById('formButton');
+
+    form.classList.toggle('hidden');
+
+    if(form.classList.contains('hidden')){
+        formButton.textContent = 'Add a new book?'
+    } else{
+        formButton.textContent = 'Finished adding books?'
+    }
+    
+
+}
