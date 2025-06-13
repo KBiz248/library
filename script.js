@@ -30,7 +30,7 @@ function addBookToLibrary(){
     //console.log(formData('form'));
     displayBook();
 
-    
+    clearForm();
 }
 
 //addBookToLibrary('hobbit', 'tolkien', 'many', 'yes');
@@ -99,9 +99,21 @@ function toggleForm(){
 
     if(form.classList.contains('hidden')){
         formButton.textContent = 'Add a new book?'
-    } else{
+    } else {
         formButton.textContent = 'Finished adding books?'
     }
     
 
+}
+
+function clearForm(){
+const textInputs = document.querySelectorAll('input[type="text"]');
+const radioInputs = document.querySelectorAll('input[type="radio"]');
+for(item of textInputs){item.value=''};
+
+/*
+for(item of radioInputs){
+}
+//play with this to see if radio buttons can be unchecked
+*/
 }
