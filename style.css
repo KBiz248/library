@@ -25,6 +25,7 @@ body {
     height: 100%;
     /* width: 99%; */
     overflow-y: auto;
+    /* backdrop-filter: blur(10px); */
 }
 
 .hidden{
@@ -33,13 +34,14 @@ body {
 
 #formButton{
     position: absolute;
+    top: 10px;
     height: 25px;
     width: fit-content;
 }
 
 form{
     width: 50%;
-    position:absolute;
+    position:relative;
     left: 20%;
     background-color: aliceblue;
 }
