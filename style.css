@@ -6,11 +6,12 @@ body {
     /* display: grid; */
     /* grid-template-rows: 150px 1fr; */
     margin:0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url(./images/pink_tree.jpg);
     background-size: cover;
-    position:absolute;
+    background-attachment: fixed;
+    /* position:absolute; */
     /* overflow:hidden; */
     top: 0px;
     bottom: 0px;
