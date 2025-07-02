@@ -8,6 +8,7 @@ body {
     margin:0;
     height: 100%;
     width: 100%;
+    
     background-image: url(./images/pink_tree.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -25,7 +26,7 @@ body {
     height: 100%;
     /* width: 99%; */
     overflow-y: auto;
-    /* backdrop-filter: blur(10px); */
+    /* backdrop-filter: blur(5px); */
 }
 
 .hidden{
@@ -38,12 +39,20 @@ body {
     height: 25px;
     width: fit-content;
     z-index: 1;
+    display:block;
+}
+
+#formButton.whileDisplayingForm{
+    top: 45%;
+    left: 45%;
 }
 
 form{
     width: 50%;
     position:absolute;
-    left: 20%;
+    top: 10%;
+    /* bottom: 50%; */
+    left: 25%;
     z-index: 1;
     background-color: aliceblue;
 }

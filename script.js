@@ -96,11 +96,14 @@ function toggleForm(){
     let formButton = document.getElementById('formButton');
 
     form.classList.toggle('hidden');
-
+    
     if(form.classList.contains('hidden')){
         formButton.textContent = 'Add a new book?'
+        formButton.classList.toggle('whileDisplayingForm');
     } else {
-        formButton.textContent = 'Finished adding books?'
+        formButton.textContent = 'Finished adding books?';
+        formButton.classList.toggle('whileDisplayingForm');
+        
     }
     
 
