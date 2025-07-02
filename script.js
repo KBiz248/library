@@ -71,7 +71,7 @@ for (const book of library){
 
     function displayBook(){
         let card = document.createElement('div');
-        card.style='display: grid; grid-template-rows: 50px 50px; grid-template-columns: 150px 150px; backdrop-filter: blur(10px);'
+        card.style='display: grid; grid-template-rows: 50px 50px; grid-template-columns: 150px 150px; width: 300px; margin:10px; backdrop-filter: blur(5px); background: radial-gradient(transparent 50%, green);';
     
 
     {
