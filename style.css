@@ -37,11 +37,13 @@ body {
     top: 10px;
     height: 25px;
     width: fit-content;
+    z-index: 1;
 }
 
 form{
     width: 50%;
-    position:relative;
+    position:absolute;
     left: 20%;
+    z-index: 1;
     background-color: aliceblue;
 }
