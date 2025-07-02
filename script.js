@@ -4,7 +4,7 @@ const form = document.getElementById('form');
 
 form.addEventListener('submit', (e) => {e.preventDefault()});
 
-const data = {};
+let data = {};
 
 function getInput(e){
     data[e.name] = e.value;
@@ -122,4 +122,6 @@ for(item of radioInputs){
 
 answer- yes, but you can't use 'item' for both loops.
 */
+
+data = {};
 }
