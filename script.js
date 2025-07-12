@@ -105,14 +105,26 @@ for (const book of library){
     
     //function to remove book card goes here or in rem() down below
     button.addEventListener('click', (e) => document.getElementById(`book${e.target.id}`).remove());
+
+    //index reset goes here
+    button.addEventListener('click', () => indexReset());
     card.appendChild(button)
     console.log(library)
     }
     }
 
-    function rem(){
-        const bookNumber = e.target.id;
-        document.getElementById(`book${bookNumber}`).remove()
+    //this function may be unnecessary. only needed if index key is used later
+    function indexReset(){
+        let i = 0;
+        for(const book of library){
+            book.index = i;
+            i++;
+        }
+        
+        //below is just for checking
+        for(const b of library){
+            console.log(b.index)
+        }
     }
 
 function toggleForm(){
