@@ -12,11 +12,12 @@ function getInput(e){
 
 }
 
-function Book(title, author, pages, readStatus) {
+function Book(title, author, pages, readStatus, index) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
+    this.index = library.length;
 }
 
 function addBookToLibrary(){
