@@ -104,13 +104,15 @@ for (const book of library){
     //above function removes book from library[], but then the index key is no longer accurate
     
     //function to remove book card goes here or in rem() down below
+    button.addEventListener('click', (e) => document.getElementById(`book${e.target.id}`).remove());
     card.appendChild(button)
     console.log(library)
     }
     }
 
     function rem(){
-    
+        const bookNumber = e.target.id;
+        document.getElementById(`book${bookNumber}`).remove()
     }
 
 function toggleForm(){
