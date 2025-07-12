@@ -73,7 +73,7 @@ for (const book of library){
     function displayBook(){
         let card = document.createElement('div');
         card.style='display: grid; grid-template-rows: 50px 50px; grid-template-columns: 150px 150px; width: 300px; margin:10px; backdrop-filter: blur(5px); background: radial-gradient(transparent 50%, green);';
-        card.id = `book${library.length}`;
+        card.id = `book${library.length - 1}`;
         console.log(card.id);
 
     {
@@ -88,9 +88,29 @@ for (const book of library){
       let div = document.createElement('div');
       div.textContent=`by ${library[(library.length)-1].author}`;
       div.style='grid-area: 2/2/3/3'
-      document.getElementById('cardArea').appendChild(div)
+      //document.getElementById('cardArea').appendChild(div)
       card.appendChild(div); 
     }
+
+    {
+    let button = document.createElement('button');
+    button.textContent = 'x';
+    button.id = library.length - 1;
+    console.log(button.id);
+    button.style='grid-area: 1/2/2/3';
+    
+    //use e.target.id in following functions
+    button.addEventListener('click' , (e) => library.splice(e.target.id, 1));
+    //above function removes book from library[], but then the index key is no longer accurate
+    
+    //function to remove book card goes here or in rem() down below
+    card.appendChild(button)
+    console.log(library)
+    }
+    }
+
+    function rem(){
+    
     }
 
 function toggleForm(){
