@@ -87,7 +87,7 @@ for (const book of library){
     {
       let div = document.createElement('div');
       div.textContent=`by ${library[(library.length)-1].author}`;
-      div.style='grid-area: 2/2/3/3'
+      div.style='grid-area: 2/1/3/2'
       //document.getElementById('cardArea').appendChild(div)
       card.appendChild(div); 
     }
