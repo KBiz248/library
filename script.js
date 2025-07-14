@@ -80,28 +80,28 @@ for (const book of library){
     {
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].title;
-        div.style='grid-area: 1/1/2/2'
+        div.style='grid-area: 1/1/2/2; margin: auto;'
         card.appendChild(div);   
     }
 
     { //fix later: author message not so great when author input is left blank
       let div = document.createElement('div');
       div.textContent=`by ${library[(library.length)-1].author}`;
-      div.style='grid-area: 2/1/3/2'
+      div.style='grid-area: 2/1/3/2; margin: auto;'
       card.appendChild(div); 
     }
 
     { //fix later: page message not so great when page input left blank
         let div = document.createElement('div');
         div.textContent=`${library[(library.length)-1].pages} pages`;
-        div.style='grid-area: 1/2/2/3'
+        div.style='grid-area: 1/2/2/3; margin: auto;'
         card.appendChild(div);
     }
 
     { //fix later: displayed message should be more then simple 'yes' or 'no'
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].readStatus;
-        div.style='grid-area: 2/2/3/3'
+        div.style='grid-area: 2/2/3/3; margin: auto;'
         card.appendChild(div);
     }
 
