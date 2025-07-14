@@ -34,6 +34,24 @@ body {
     margin-top: 45px;
 }
 
+/*
+.blur{
+    backdrop-filter: blur(5px);
+}
+
+not important. just wanted to use this to blur the background of the page when the book form was displayed.
+*/
+
+.card{
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 150px 150px;
+    width: 300px;
+    backdrop-filter: blur(5px);
+    background: radial-gradient(transparent 50%, green);
+    border-radius: 5px;
+}
+
 .cardInfo{
     margin: auto;
     text-shadow: white 0 0 1.2rem;

@@ -72,10 +72,14 @@ for (const book of library){
 
     function displayBook(){
         let card = document.createElement('div');
-        card.style='display: grid; grid-template-rows: 50px 50px; grid-template-columns: 150px 150px; width: 300px; margin:10px; backdrop-filter: blur(5px); background: radial-gradient(transparent 50%, green); border-radius: 5px;';
+        //card.style='display: grid; grid-template-rows: 50px 50px; grid-template-columns: 150px 150px; width: 300px; backdrop-filter: blur(5px); background: radial-gradient(transparent 50%, green); border-radius: 5px;';
+        //perhaps just add a class name to this element and use css sheet to style instead of js
+            //done
         card.id = `book${library.length - 1}`;
         console.log(card.id);
+        card.classList.add('card');
         document.getElementById('cardArea').appendChild(card);
+        
 
     {
         let div = document.createElement('div');
@@ -157,10 +161,13 @@ function toggleForm(){
     if(form.classList.contains('hidden')){
         formButton.textContent = 'Add a new book?'
         formButton.classList.toggle('whileDisplayingForm');
+        //document.getElementById('cardArea').classList.contains('blur')=false;
+            //styling from .blur is getting canceled out for some reason
     } else {
         formButton.textContent = 'Finished adding books?';
         formButton.classList.toggle('whileDisplayingForm');
-        
+        //document.getElementById('cardArea').classList.contains('blur')=true;
+            //styling from .blur is getting canceled out for some reason
     }
     
 
