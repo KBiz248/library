@@ -98,6 +98,13 @@ for (const book of library){
         card.appendChild(div);
     }
 
+    { //fix later: displayed message should be more then simple 'yes' or 'no'
+        let div = document.createElement('div');
+        div.textContent=library[(library.length)-1].readStatus;
+        div.style='grid-area: 2/2/3/3'
+        card.appendChild(div);
+    }
+
     {
     let button = document.createElement('button');
     button.textContent = 'x';
