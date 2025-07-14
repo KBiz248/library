@@ -80,7 +80,7 @@ for (const book of library){
     {
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].title;
-        div.style='grid-area: 1/1/2/2; margin: auto;';
+        div.style='grid-area: 1/1/2/2; margin: auto; font-size: 1.2rem;';
         div.classList.add('cardInfo');
         card.appendChild(div);   
     }
