@@ -97,7 +97,7 @@ for (const book of library){
     button.textContent = 'x';
     button.id = library.length - 1;
     console.log(button.id);
-    button.style='grid-area: 1/2/2/3';
+    button.style='position: absolute; right: 0px; height: 1.5rem; width: 1.5rem; border-radius: 5px; margin: 5px;';
     
     //use e.target.id in following functions
     button.addEventListener('click' , (e) => library.splice(e.target.id, 1));
