@@ -84,14 +84,19 @@ for (const book of library){
         card.appendChild(div);   
     }
 
-    {
+    { //fix later: author message not so great when author input is left blank
       let div = document.createElement('div');
       div.textContent=`by ${library[(library.length)-1].author}`;
       div.style='grid-area: 2/1/3/2'
       card.appendChild(div); 
     }
 
-    
+    { //fix later: page message not so great when page input left blank
+        let div = document.createElement('div');
+        div.textContent=`${library[(library.length)-1].pages} pages`;
+        div.style='grid-area: 1/2/2/3'
+        card.appendChild(div);
+    }
 
     {
     let button = document.createElement('button');
