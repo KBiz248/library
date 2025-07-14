@@ -75,22 +75,23 @@ for (const book of library){
         card.style='display: grid; grid-template-rows: 50px 50px; grid-template-columns: 150px 150px; width: 300px; margin:10px; backdrop-filter: blur(5px); background: radial-gradient(transparent 50%, green); border-radius: 5px;';
         card.id = `book${library.length - 1}`;
         console.log(card.id);
+        document.getElementById('cardArea').appendChild(card);
 
     {
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].title;
         div.style='grid-area: 1/1/2/2'
-        card.appendChild(div);
-        document.getElementById('cardArea').appendChild(card);
+        card.appendChild(div);   
     }
 
     {
       let div = document.createElement('div');
       div.textContent=`by ${library[(library.length)-1].author}`;
       div.style='grid-area: 2/1/3/2'
-      //document.getElementById('cardArea').appendChild(div)
       card.appendChild(div); 
     }
+
+    
 
     {
     let button = document.createElement('button');
