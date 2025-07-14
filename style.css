@@ -30,6 +30,7 @@ body {
 }
 
 .cardInfo{
+    margin: auto;
     text-shadow: white 0 0 1.2rem;
     text-align: center;
 }

@@ -80,7 +80,7 @@ for (const book of library){
     {
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].title;
-        div.style='grid-area: 1/1/2/2; margin: auto; font-size: 1.2rem;';
+        div.style='grid-area: 1/1/2/2; font-size: 1.2rem;';
         div.classList.add('cardInfo');
         card.appendChild(div);   
     }
@@ -88,7 +88,7 @@ for (const book of library){
     { //fix later: author message not so great when author input is left blank
       let div = document.createElement('div');
       div.textContent=`by ${library[(library.length)-1].author}`;
-      div.style='grid-area: 2/1/3/2; margin: auto;';
+      div.style='grid-area: 2/1/3/2;';
       div.classList.add('cardInfo');
       card.appendChild(div); 
     }
@@ -96,7 +96,7 @@ for (const book of library){
     { //fix later: page message not so great when page input left blank
         let div = document.createElement('div');
         div.textContent=`${library[(library.length)-1].pages} pages`;
-        div.style='grid-area: 1/2/2/3; margin: auto;';
+        div.style='grid-area: 1/2/2/3;';
         div.classList.add('cardInfo');
         card.appendChild(div);
     }
@@ -104,7 +104,7 @@ for (const book of library){
     { //fix later: displayed message should be more then simple 'yes' or 'no'
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].readStatus;
-        div.style='grid-area: 2/2/3/3; margin: auto;'
+        div.style='grid-area: 2/2/3/3;'
         div.classList.add('cardInfo');
         card.appendChild(div);
     }
