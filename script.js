@@ -120,9 +120,10 @@ for (const book of library){
     //use e.target.id in following functions
     button.addEventListener('click' , (e) => library.splice(e.target.id, 1));
     //above function removes book from library[], but then the index key is no longer accurate
+        //fixed above problem with indexReset()
     
     //function to remove book card goes here or in rem() down below
-    //rem() was removed
+        //rem() was removed
     button.addEventListener('click', (e) => document.getElementById(`book${e.target.id}`).remove());
 
     //index reset goes here
