@@ -80,21 +80,24 @@ for (const book of library){
     {
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].title;
-        div.style='grid-area: 1/1/2/2; margin: auto;'
+        div.style='grid-area: 1/1/2/2; margin: auto;';
+        div.classList.add('cardInfo');
         card.appendChild(div);   
     }
 
     { //fix later: author message not so great when author input is left blank
       let div = document.createElement('div');
       div.textContent=`by ${library[(library.length)-1].author}`;
-      div.style='grid-area: 2/1/3/2; margin: auto;'
+      div.style='grid-area: 2/1/3/2; margin: auto;';
+      div.classList.add('cardInfo');
       card.appendChild(div); 
     }
 
     { //fix later: page message not so great when page input left blank
         let div = document.createElement('div');
         div.textContent=`${library[(library.length)-1].pages} pages`;
-        div.style='grid-area: 1/2/2/3; margin: auto;'
+        div.style='grid-area: 1/2/2/3; margin: auto;';
+        div.classList.add('cardInfo');
         card.appendChild(div);
     }
 
@@ -102,6 +105,7 @@ for (const book of library){
         let div = document.createElement('div');
         div.textContent=library[(library.length)-1].readStatus;
         div.style='grid-area: 2/2/3/3; margin: auto;'
+        div.classList.add('cardInfo');
         card.appendChild(div);
     }
 
@@ -111,6 +115,7 @@ for (const book of library){
     button.id = library.length - 1;
     console.log(button.id);
     button.style='position: absolute; right: 0px; height: 1.5rem; width: 1.5rem; border-radius: 5px; margin: 5px;';
+    //decide later: change to "right: -1.5rem" to move x button outside and to the right of book card
     
     //use e.target.id in following functions
     button.addEventListener('click' , (e) => library.splice(e.target.id, 1));
