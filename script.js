@@ -104,6 +104,7 @@ for (const book of library){
     //above function removes book from library[], but then the index key is no longer accurate
     
     //function to remove book card goes here or in rem() down below
+    //rem() was removed
     button.addEventListener('click', (e) => document.getElementById(`book${e.target.id}`).remove());
 
     //index reset goes here
@@ -114,6 +115,7 @@ for (const book of library){
     }
 
     //this function may be unnecessary. only needed if index key is used later
+    //check syntax of these loops vs loops in clearForm() down below
     function indexReset(){
         let i = 0;
         for(const book of library){
