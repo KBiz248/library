@@ -75,6 +75,7 @@ not important. just wanted to use this to blur the background of the page when t
     display: none;
 }
 
+/* .center may not be doing anything */
 .center{
     margin-left:auto;
     margin-right: auto;
@@ -101,5 +102,9 @@ form{
     /* bottom: 50%; */
     left: 25%;
     z-index: 1;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white, inset 0 0 50px black;
+    backdrop-filter: blur(10px);
 }
