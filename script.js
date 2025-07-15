@@ -131,7 +131,11 @@ for (const book of library){
     button.addEventListener('click', (e) => document.getElementById(`book${e.target.id}`).remove());
 
     //index reset goes here
-    button.addEventListener('click', () => indexReset());
+    button.addEventListener('click', (e) => indexReset(e));
+    button.addEventListener('click', (e) => {
+        
+        //this could also be written as a named function or 
+    })
     card.appendChild(button)
     console.log(library)
     }
@@ -139,7 +143,7 @@ for (const book of library){
 
     //this function may be unnecessary. only needed if index key is used later
     //check syntax of these loops vs loops in clearForm() down below
-    function indexReset(){
+    function indexReset(e){
         let i = 0;
         for(const book of library){
             book.index = i;
@@ -147,9 +151,20 @@ for (const book of library){
         }
         
         //below is just for checking
-        for(const b of library){
+        /*for(const b of library){
             console.log(b.index)
-        }
+        }*/
+
+        const cardCollection = document.getElementsByClassName('card');
+        
+        //console.log(initialValue);
+
+        for(let initialValue = e.target.id; initialValue < cardCollection.length; initialValue++){
+            cardCollection[initialValue].querySelector('button').id = initialValue;
+            cardCollection[initialValue].id = 'book'+initialValue;
+            
+        };
+        
     }
 
 function toggleForm(){
