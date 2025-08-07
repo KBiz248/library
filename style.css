@@ -48,9 +48,14 @@ not important. just wanted to use this to blur the background of the page when t
     grid-template-columns: 150px 150px;
     width: 300px;
     backdrop-filter: blur(10px);
-    background: radial-gradient(transparent 50%, green);
     border-radius: 5px;
+    box-shadow: 0 0 12px black, inset 0 0 5px white;
+
+    /* 
+    moved the two lines below to .card[data-read-status='yes'] 
+    background: radial-gradient(transparent 50%, green); 
     box-shadow: 2px 2px 10px yellow, -2px -2px 10px cyan, 0 0 10px white;
+    */
     
     /*
     ok, these layered box shadows are GIVING
@@ -76,6 +81,20 @@ background: radial-gradient(transparent 30%, rgb(122, 0, 122));
 
     margin: 10px;
     /* without the margin, box shadows on the left column and the top row get cut off harshly */
+}
+
+.card[data-read-status='yes']{
+    background: radial-gradient(transparent 50%, green);
+    box-shadow: 2px 2px 10px yellow, -2px -2px 10px cyan, 0 0 10px white;
+}
+
+.card[data-read-status='no']{
+    background: radial-gradient(transparent 30%, rgb(122, 0, 122));
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgb(255, 0, 0), -2px -2px 10px rgb(0, 0, 255), 
+    -2px 2px 10px rgb(0, 0, 255), -2px 2px 10px rgb(255, 0, 0),
+    2px -2px 10px rgb(0, 0, 255), 2px -2px 10px rgb(255, 0, 0), 
+    inset 2px 2px 10px rgb(100, 0, 0), inset -2px -2px 10px rgb(0, 0, 100), inset 0 0 35px black, 0 0 5px rgba(255, 255, 255, 0.527);
 }
 
 .cardInfo{

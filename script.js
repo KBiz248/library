@@ -78,6 +78,7 @@ for (const book of library){
         card.id = `book${library.length - 1}`;
         console.log(card.id);
         card.classList.add('card');
+        card.dataset.readStatus = library[(library.length)-1].readStatus;
         document.getElementById('cardArea').appendChild(card);
         
 
