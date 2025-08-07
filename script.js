@@ -75,7 +75,7 @@ for (const book of library){
         //card.style='display: grid; grid-template-rows: 50px 50px; grid-template-columns: 150px 150px; width: 300px; backdrop-filter: blur(5px); background: radial-gradient(transparent 50%, green); border-radius: 5px;';
         //perhaps just add a class name to this element and use css sheet to style instead of js
             //done
-        card.id = `book${library.length - 1}`;
+        card.id = library.length - 1;
         console.log(card.id);
         card.classList.add('card');
         card.dataset.readStatus = library[(library.length)-1].readStatus;
@@ -117,19 +117,19 @@ for (const book of library){
     {
     let button = document.createElement('button');
     button.textContent = 'x';
-    button.id = library.length - 1;
+    // button.id = library.length - 1;
     console.log(button.id);
     button.style='position: absolute; right: 0px; height: 1.5rem; width: 1.5rem; border-radius: 5px; margin: 5px;';
     //decide later: change to "right: -1.5rem" to move x button outside and to the right of book card
     
     //use e.target.id in following functions
-    button.addEventListener('click' , (e) => library.splice(e.target.id, 1));
+    button.addEventListener('click' , (e) => library.splice(e.target.parentElement.id, 1));
     //above function removes book from library[], but then the index key is no longer accurate
         //fixed above problem with indexReset()
     
     //function to remove book card goes here or in rem() down below
         //rem() was removed
-    button.addEventListener('click', (e) => document.getElementById(`book${e.target.id}`).remove());
+    button.addEventListener('click', (e) => document.getElementById(e.target.parentElement.id).remove());
 
     //index reset goes here
     button.addEventListener('click', (e) => indexReset(e));
@@ -160,9 +160,9 @@ for (const book of library){
         
         //console.log(initialValue);
 
-        for(let initialValue = e.target.id; initialValue < cardCollection.length; initialValue++){
-            cardCollection[initialValue].querySelector('button').id = initialValue;
-            cardCollection[initialValue].id = 'book'+initialValue;
+        for(let initialValue = e.target.parentElement.id; initialValue < cardCollection.length; initialValue++){
+            //cardCollection[initialValue].querySelector('button').id = initialValue;
+            cardCollection[initialValue].id = initialValue;
             
         };
         
