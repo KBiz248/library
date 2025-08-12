@@ -155,8 +155,10 @@ for (const book of library){
             document.getElementById('title').value = library[e.target.parentElement.id].title;
             document.getElementById('author').value = library[e.target.parentElement.id].author;
             document.getElementById('pages').value = library[e.target.parentElement.id].pages;
+            document.getElementById(library[e.target.parentElement.id].readStatus).checked = true;
             //awesome. Now...
             //check the appropriate radio button
+                //done
             //create a 'confirm changes' button to put on the form while editing entries
             //take away the other buttons (or change their text/disable them)
 
