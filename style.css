@@ -24,6 +24,7 @@ body {
     /* background-image: url(./images/pink_tree.jpg); */
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat(auto-fit, 120px);
     column-gap: 2.5rem;
     row-gap: 1rem;
     height: 100%;
@@ -102,6 +103,15 @@ background: radial-gradient(transparent 30%, rgb(122, 0, 122));
     text-shadow: white 0 0 1.2rem;
     text-align: center;
 }
+
+/* .editMenu{
+    height: 250px;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px white, inset 0 0 5px black;
+    position: absolute;
+    bottom: -275px;
+} not necessary now that formAutoFill() exists*/
 
 .hidden{
     display: none;

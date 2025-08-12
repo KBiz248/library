@@ -140,7 +140,47 @@ for (const book of library){
     card.appendChild(button)
     console.log(library)
     }
+
+    {
+        let editButton = document.createElement('button');
+        editButton.textContent = 'edit';
+        editButton.style = 'position: absolute; right: 0px; bottom: 0px; height: 1.5rem; width: 4.5rem; border-radius: 5px; margin: 5px;'
+        //editButton.addEventListener('click', () => toggleForm();)
+        /*editButton.addEventListener('click', (e) => {
+            editMenuList[e.target.parentElement.id].classList.toggle('hidden');
+
+        })*/
+       function formAutoFill(e){
+            toggleForm();
+            document.getElementById('title').value = library[e.target.parentElement.id].title;
+            document.getElementById('author').value = library[e.target.parentElement.id].author;
+            document.getElementById('pages').value = library[e.target.parentElement.id].pages;
+            //awesome. Now...
+            //check the appropriate radio button
+            //create a 'confirm changes' button to put on the form while editing entries
+            //take away the other buttons (or change their text/disable them)
+
+       }
+       editButton.addEventListener('click', (e) => formAutoFill(e));
+
+        card.appendChild(editButton);
     }
+
+    /*
+    {
+        let editMenu = document.createElement('div');
+        editMenu.classList.add('hidden');
+        editMenu.classList.add('editMenu');
+        card.appendChild(editMenu);
+        console.log(editMenuList);
+
+        
+
+    }*/
+    }
+
+    let editMenuList = document.getElementsByClassName('editMenu');
+    console.log(editMenuList);
 
     //this function may be unnecessary. only needed if index key is used later
     //check syntax of these loops vs loops in clearForm() down below
